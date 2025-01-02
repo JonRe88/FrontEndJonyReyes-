@@ -27,15 +27,14 @@ const QuoteText: FC<QuoteTextProps> = ({ willChange }) => (
         willChange ? 'will-change-opacity' : ''
       }`}
     >
-      Soy un diseñador FrontEnd apasionado que une el puente entre el desarrollo
-      y el diseño.
+      Un desarrollador frontend junior entusiasta y orientado a los detalles con conocimientos competentes en HTML y CSS, así como en bibliotecas de terceros.
     </p>
     <p
       className={`about-2 leading-tight ${
         willChange ? 'will-change-opacity' : ''
       }`}
     >
-      Tomando responsabilidad de crear una buena experiencia de usuario
+      Teniendo como prioridad la creacion de una buena experiencia de usuario,
       utilizando una arquitectura moderna.
     </p>
   </div>
