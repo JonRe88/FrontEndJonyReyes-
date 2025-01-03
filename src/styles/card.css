@@ -1,0 +1,125 @@
+.card {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 1rem;
+}
+
+.card::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: 0.6s;
+  z-index: 1;
+  background-color: #4e46e582;
+  opacity: 0;
+}
+.card h2 {
+  position: relative;
+  z-index: 2;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.card p {
+  position: relative;
+  z-index: 2;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  color: #f3f4f6;
+  margin-bottom: 1.5rem;
+}
+
+.card:hover {
+  box-shadow: 0.063rem 0.063rem 1.25rem 0.375rem rgba(0, 0, 0, 0.317);
+    transform: translateY(-0.5rem);
+}
+
+.card:hover::before {
+  opacity: 0.95;
+
+}
+
+.card:hover p {
+  color: #fff;
+}
+
+.circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: 0.6s;
+  z-index: 0;
+}
+
+/* Card-specific circle positions */
+.card:nth-child(1) .circle {
+  clip-path: circle(calc(6.25rem + 7.5vw) at 100% 100%);
+}
+
+.card:nth-child(2) .circle {
+  clip-path: circle(calc(6.25rem + 7.5vw) at 0% 100%);
+}
+
+.card:nth-child(3) .circle {
+  clip-path: circle(calc(6.25rem + 7.5vw) at 100% 0%);
+}
+
+.card:nth-child(4) .circle {
+  clip-path: circle(calc(6.25rem + 7.5vw) at 0% 0%);
+}
+
+.card:hover .circle {
+  clip-path: circle(150% at 50% 50%);
+}
+card:hover .circle {
+  transform: scale(1.1);
+}
+
+/* Responsive padding for card content */
+.card > div {
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+/* Responsive button styling */
+.card a {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: #4f46e5;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.card a:hover {
+  background-color: #4f46e5;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Mobile optimization */
+@media (max-width: 640px) {
+  .card {
+    aspect-ratio: 3/4;
+  }
+  
+  .card > div {
+    padding: 1rem;
+  }
+  
+  .card h2 {
+    font-size: 1.5rem;
+  }
+  
+  .card p {
+    font-size: 1rem;
+  }
+}
