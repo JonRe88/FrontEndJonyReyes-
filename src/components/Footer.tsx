@@ -9,7 +9,7 @@ const Footer = () => {
           className="fill-current"
         />
         <p className="text-white text-center">
-          | Jony Reyes | <br />| Frontend Developer | 2024 |
+          | Jony Reyes | <br />| Frontend Developer | <br />   © {new Date().getFullYear()} All rights reserved.2024 |
         </p>
     </footer>
   );
