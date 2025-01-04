@@ -8,7 +8,8 @@ const cards: CardData[] = [
     id: 1,
     title: "FreeCodeCamp",
     description: "Diseño web Responsivo.",
-    image: "/CertificadoFreeCodeCamp.jpg"
+    image: "/CertificadoFreeCodeCamp.jpg",
+    url:"https://www.freecodecamp.org/certification/JonyR/responsive-web-design"
   },
   {
     id: 2,
@@ -20,13 +21,15 @@ const cards: CardData[] = [
     id: 3,
     title: "AluraLatam",
     description: "Frontend",
-    image: "/CertificadoFrontEnd.png"
+    image: "/CertificadoFrontEnd.png",
+    url: "https://app.aluracursos.com/user/jreyesturismo/degree-frontend-grupo7-one-15799/certificate"
   },
   {
   id: 4,
   title: "AluraLatam",
   description: "JavaScript",
-  image: "/CertificadoAluraJava.jpg"
+  image: "/CertificadoAluraJava.jpg",
+  url: "https://app.aluracursos.com/user/jreyesturismo/degree-programacion-primeros-pasos-15697/certificate"
 },
   {
     id: 5,
@@ -57,6 +60,13 @@ const cards: CardData[] = [
     title: "Oracle One",
     description: "Participación en el evento Oracle One",
     image: "/CertificadoJonyReyesPerez.PNG"
+  },
+  {
+    id: 10,
+    title: "Oracle One",
+    description: "Oracle Next Education F2 T7  <br /> Front-end",
+    image: "/CertificadoProgramaG7.png",
+    url: "https://app.aluracursos.com/program/certificate/PRODUCT_PROGRAM/20"
   }
   
   
@@ -95,6 +105,11 @@ const StackingCards = () => {
                      style={{textShadow: '0px 1px 0px white, 0 0 1em blue, 0 0 0.2em blue'}}
                      dangerouslySetInnerHTML={{ __html: card.description }}>
                   </p>
+                  {card.url && (
+                    <a href={card.url} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block bg-blue-500 text-white py-2 px-4 rounded">
+                      Ver Certififado
+                    </a>
+                  )}
                 </div>
               <div className="w-full md:w-2/3 h-[300px] md:h-auto">
                   <img src={card.image} alt={card.title} className="w-full h-full object-contain " />
