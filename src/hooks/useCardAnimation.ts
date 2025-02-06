@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -9,7 +9,7 @@ export const useCardAnimation = (cardsWrapperRef: React.RefObject<HTMLUListEleme
     if (!cardsWrapperRef.current) return;
 
     const cards = cardsWrapperRef.current.querySelectorAll('.card');
-    const numCards = cards.length;
+    const numCards = 10;
 
     cards.forEach((card, index) => {
       // Initial fade in animation
@@ -25,7 +25,7 @@ export const useCardAnimation = (cardsWrapperRef: React.RefObject<HTMLUListEleme
           ease: "power2.out",
           scrollTrigger: {
             trigger: card,
-            start: "top bottom-=100",
+            start: "top bottom-=20",
             end: "bottom center",
             toggleActions: "play none none reverse"
           }
@@ -34,7 +34,7 @@ export const useCardAnimation = (cardsWrapperRef: React.RefObject<HTMLUListEleme
 
       // Scaling animation while scrolling
       gsap.to(card, {
-        scale: 1 - (0.08 * (numCards - index - 1)),
+        scale: 1 - (0.05 * (numCards - index - 1)),
         scrollTrigger: {
           trigger: cardsWrapperRef.current,
           start: `${index / numCards * 100}%`,
