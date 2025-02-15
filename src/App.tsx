@@ -7,7 +7,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import StackingCards from './components/StackingCards';
 import Projects2 from './components/Projects2';
-import Logos from './components/logos';
+import Logos from './components/Logos';
 
 function App() {
   return (
