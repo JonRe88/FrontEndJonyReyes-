@@ -6,6 +6,8 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import StackingCards from './components/StackingCards';
+import Projects2 from './components/Projects2';
+import Logos from './components/logos';
 
 function App() {
   return (
@@ -25,7 +27,9 @@ function App() {
          <Skills />
          <section id="projects">
  <Projects /> 
+ <Projects2/>
          </section>
+         <Logos/>
        <section id="contact">
         <Contact />
        </section>
